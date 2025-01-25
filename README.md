@@ -21,6 +21,7 @@ The goal of this project is to design and develop a web application using Django
 GT Movies Store is a web application that allows users to access information about movies and place orders to purchase them. Users will also be able to list, create, edit, and delete movie reviews. The application will feature a user-friendly interface and provide useful information about each movie, such as its name, price, description, and an image.
 
 This project will help you reinforce the different concepts to be covered in class and build your skills in software engineering. For this purpose, you will be asked to work in a team of peers to design and build a software product following an agile methodology. We propose this activity to be a fun project that you can use to boost your portfolio!
+
 ---
 
 ## Grading  
