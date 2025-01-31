@@ -3,4 +3,5 @@
   <component name="Black">
     <option name="sdkName" value="Python 3.13 (cs2340-gt-movies)" />
   </component>
+  <component name="ProjectRootManager" version="2" project-jdk-name="Python 3.10 (cs2340-gt-movies)" project-jdk-type="Python SDK" />
 </project>
