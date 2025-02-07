@@ -1,21 +1,27 @@
-from django.shortcuts import render
+from django.shortcuts import render, get_object_or_404
 from .models import Movie
+
 def index(request):
-    search_term = request.GET.get('search')
-    if search_term:
-        movies = Movie.objects.filter(name__icontains=search_term)
-    else:
-        movies = Movie.objects.all()
-    template_data = {}
-    template_data['title'] = 'Movies'
-    template_data['movies'] = movies
-    return render(request, 'movies/index.html',
-                  {'template_data': template_data})
+    """
+    Display a list of movies. If a search query is provided, filter by name.
+    """
+    search_term = request.GET.get('search', '')
+    movies = Movie.objects.filter(name__icontains=search_term) if search_term else Movie.objects.all()
+
+    template_data = {
+        'title': 'Movies',
+        'movies': movies,
+    }
+    return render(request, 'movies/index.html', {'template_data': template_data})
 
 def show(request, id):
-    movie = Movie.objects.get(id=id)
-    template_data = {}
-    template_data['title'] = movie.name
-    template_data['movie'] = movie
-    return render(request, 'movies/show.html',
-                  {'template_data': template_data})
+    """
+    Display details of a specific movie.
+    """
+    movie = get_object_or_404(Movie, id=id)
+
+    template_data = {
+        'title': movie.name,
+        'movie': movie,
+    }
+    return render(request, 'movies/show.html', {'template_data': template_data})

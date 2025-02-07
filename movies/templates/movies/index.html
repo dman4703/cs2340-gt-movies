@@ -7,36 +7,34 @@
       <div class="col mx-auto mb-3">
         <h2>List of Movies</h2>
         <hr />
-         <p class="card-text">
+        <p class="card-text">
           <form method="GET">
             <div class="row">
               <div class="col-auto mx-auto w-100">
                 <div class="input-group col-auto">
-                  <input type="text" class="form-control"
-                    name="search">
-                  <button class="btn bg-dark text-white"
-                  type="submit">icon</button>
+                  <input type="text" class="form-control" name="search" placeholder="Search movies...">
+                  <button class="btn bg-dark text-white" type="submit">Search</button>
                 </div>
               </div>
-
             </div>
           </form>
+        </p>
       </div>
     </div>
-    <div class="col">
+    <div class="row">
       {% for movie in template_data.movies %}
-      <div class="mx-auto col-md-4 col-lg-3 mb-2">
+      <div class="col-md-4 col-lg-3 mb-3">
         <div class="p-2 card align-items-center pt-4">
-          <img src="{{ movie.image.url }}"
-            class="card-img-top rounded img-card-200">
+          <img src="{{ movie.image.url }}" class="card-img-top rounded img-card-200" alt="{{ movie.name }}">
           <div class="card-body text-center">
-            <a href="{% url 'movies.show' id=movie.id %}"
-              class="btn bg-dark text-white">
-              {{movie.name}}
-            </a>
+            <a href="{% url 'movies.show' id=movie.id %}" class="btn bg-dark text-white">{{ movie.name }}</a>
+            <p class="mt-2"><b>Genre:</b> {{ movie.get_genre_display }}</p>
+            <p><b>Price:</b> ${{ movie.price }}</p>
           </div>
         </div>
       </div>
+      {% empty %}
+      <p class="text-center">No movies found.</p>
       {% endfor %}
     </div>
   </div>
