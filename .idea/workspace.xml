@@ -5,14 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="93c46571-e8b9-4fad-a4db-4b41aec17692" name="Changes" comment="movie list feature">
-      <change beforePath="$PROJECT_DIR$/.idea/cs2340-gt-movies.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/cs2340-gt-movies.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cart/templatetags/cart_filters.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cart/urls.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cart/utils.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/movies/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/movies/admin.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/movies/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/movies/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/moviesstore/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/moviesstore/admin.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/moviesstore/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/moviesstore/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/moviesstore/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/moviesstore/urls.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -22,8 +19,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Python Script" />
         <option value="HTML File" />
+        <option value="Python Script" />
       </list>
     </option>
   </component>
@@ -80,8 +77,8 @@
       <window_info id="Commit_Guest" show_stripe_button="false" />
       <window_info id="Pull Requests" show_stripe_button="false" />
       <window_info id="Learn" show_stripe_button="false" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.09003906" />
-      <window_info id="Commit" order="1" weight="0.25" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.18808594" />
+      <window_info id="Commit" order="1" weight="0.18808594" />
       <window_info id="Structure" order="2" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Database Changes" show_stripe_button="false" />
       <window_info anchor="bottom" id="TypeScript" show_stripe_button="false" />
@@ -132,7 +129,7 @@
       <workItem from="1738354755945" duration="17501000" />
       <workItem from="1738606239172" duration="2660000" />
       <workItem from="1738872341597" duration="1251000" />
-      <workItem from="1738938965619" duration="8053000" />
+      <workItem from="1738938965619" duration="12744000" />
     </task>
     <task id="LOCAL-00001" summary="Test commit for pull">
       <option name="closed" value="true" />
