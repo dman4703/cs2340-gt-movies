@@ -86,4 +86,4 @@ class Review(models.Model):
     last_updated_date = models.DateTimeField(auto_now=True)
 
     def __str__(self):
-        return f"Review by {self.user} on {self.movie.name}"
+        return f"Review by {self.user.username} on {self.movie.name}"

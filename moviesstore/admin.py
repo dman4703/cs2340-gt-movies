@@ -4,7 +4,8 @@ from django.contrib.auth.models import User
 from django.urls import reverse
 from django.utils.safestring import mark_safe
 from movies.models import Movie, Review
-from .models import ShoppingCart, CartItem, Order, OrderItem
+from cart.models import Order, Item
+from .models import ShoppingCart, CartItem
 
 
 # Movie Admin Configuration
@@ -68,14 +69,14 @@ admin.site.register(ShoppingCart, ShoppingCartAdmin)
 
 # Order & OrderItem Admin Configuration
 class OrderItemInline(admin.TabularInline):
-    model = OrderItem
+    model = Item
     extra = 1
     autocomplete_fields = ['movie']
 
 class OrderAdmin(admin.ModelAdmin):
-    list_display = ('user_link', 'order_date', 'payment_status', 'total_amount')
-    search_fields = ('user__username', 'order_date')
-    list_filter = ('payment_status', 'order_date')
+    list_display = ('user_link', 'date', 'total_amount')
+    search_fields = ('user__username', 'date')
+    list_filter = ('date',)
     inlines = [OrderItemInline]
     autocomplete_fields = ['user']
     list_select_related = ('user',)
@@ -87,13 +88,13 @@ class OrderAdmin(admin.ModelAdmin):
 
     @admin.display(description='Total Amount')
     def total_amount(self, obj):
-        return sum(item.price_at_purchase * item.quantity for item in obj.items.all())
+        return sum(item.price * item.quantity for item in obj.items.all())
 
 admin.site.register(Order, OrderAdmin)
 
 
 class OrderItemAdmin(admin.ModelAdmin):
-    list_display = ('order', 'movie_link', 'quantity', 'price_at_purchase')
+    list_display = ('order', 'movie_link', 'quantity', 'price')
     autocomplete_fields = ['movie', 'order']
     list_select_related = ('movie', 'order')
 
@@ -102,7 +103,7 @@ class OrderItemAdmin(admin.ModelAdmin):
         return mark_safe(f'<a href="{url}">{obj.movie.name}</a>')
     movie_link.short_description = 'Movie'
 
-admin.site.register(OrderItem, OrderItemAdmin)
+admin.site.register(Item, OrderItemAdmin)
 
 
 # Customize Admin Site Appearance
