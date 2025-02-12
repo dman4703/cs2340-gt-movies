@@ -29,8 +29,8 @@ def show(request, id):
 def create_review(request, id):
     if (request.method == 'POST'
             and (request.POST['comment'] != '')
-            and (request.POST.get('rating') > 0)
-            and request.POST.get('rating') < 6):
+            and (int(request.POST['rating']) > 0)
+            and (int(request.POST['rating']) < 6)):
         movie = Movie.objects.get(id=id)
         review = Review()
         review.comment = request.POST['comment']
@@ -52,8 +52,8 @@ def edit_review(request, id, review_id):
         return render(request, 'movies/edit_review.html',{'template_data': template_data})
     elif (request.method == 'POST'
           and (request.POST['comment'] != '')
-          and (request.POST.get('rating') > 0)
-          and request.POST.get('rating') < 6):
+            and (int(request.POST['rating']) > 0)
+            and (int(request.POST['rating']) < 6)):
         review = Review.objects.get(id=review_id)
         review.comment = request.POST['comment']
         review.rating = int(request.POST['rating'])
