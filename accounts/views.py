@@ -3,6 +3,7 @@ from django.contrib.auth import login as auth_login, authenticate, logout as aut
 from .forms import CustomUserCreationForm, CustomErrorList
 from django.shortcuts import redirect
 from django.contrib.auth.decorators import login_required
+from django.contrib.auth.models import User
 
 # logs out the current user and redirects to the home page.
 @login_required
@@ -50,3 +51,8 @@ def signup(request):
             # If the form has errors, send the form back to the template to display errors.
             template_data['form'] = form
             return render(request, 'accounts/signup.html', {'template_data': template_data})
+
+@login_required
+def orders(request):
+    template_data = {'title': 'Orders', 'orders': request.user.order_set.all()}
+    return render(request, 'accounts/orders.html', {'template_data': template_data})
