@@ -5,8 +5,6 @@ from django.urls import reverse
 from django.utils.safestring import mark_safe
 from movies.models import Movie, Review
 from cart.models import Order, Item
-from .models import ShoppingCart, CartItem
-
 
 # Movie Admin Configuration
 class MovieAdmin(admin.ModelAdmin):
@@ -17,7 +15,6 @@ class MovieAdmin(admin.ModelAdmin):
     readonly_fields = ('image_url',)
 
 admin.site.register(Movie, MovieAdmin)
-
 
 # Review Admin Configuration
 class ReviewAdmin(admin.ModelAdmin):
@@ -45,28 +42,6 @@ class ReviewAdmin(admin.ModelAdmin):
 
 admin.site.register(Review, ReviewAdmin)
 
-
-# ShoppingCart & CartItem Admin Configuration
-class CartItemInline(admin.TabularInline):
-    model = CartItem
-    extra = 1
-    autocomplete_fields = ['movie']
-
-class ShoppingCartAdmin(admin.ModelAdmin):
-    list_display = ('user_link', 'created_date')
-    search_fields = ('user__username',)
-    inlines = [CartItemInline]
-    autocomplete_fields = ['user']
-    list_select_related = ('user',)
-
-    def user_link(self, obj):
-        url = reverse("admin:auth_user_change", args=[obj.user.pk])
-        return mark_safe(f'<a href="{url}">{obj.user.username}</a>')
-    user_link.short_description = 'User'
-
-admin.site.register(ShoppingCart, ShoppingCartAdmin)
-
-
 # Order & OrderItem Admin Configuration
 class OrderItemInline(admin.TabularInline):
     model = Item
@@ -92,7 +67,6 @@ class OrderAdmin(admin.ModelAdmin):
 
 admin.site.register(Order, OrderAdmin)
 
-
 class OrderItemAdmin(admin.ModelAdmin):
     list_display = ('order', 'movie_link', 'quantity', 'price')
     autocomplete_fields = ['movie', 'order']
@@ -104,7 +78,6 @@ class OrderItemAdmin(admin.ModelAdmin):
     movie_link.short_description = 'Movie'
 
 admin.site.register(Item, OrderItemAdmin)
-
 
 # Customize Admin Site Appearance
 admin.site.site_header = "GT Movies Store Admin"
