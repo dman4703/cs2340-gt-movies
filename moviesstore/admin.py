@@ -6,18 +6,55 @@ from django.utils.safestring import mark_safe
 from movies.models import Movie, Review
 from cart.models import Order, Item
 
+# Inline for Reviews in the Movie admin
+class ReviewInline(admin.TabularInline):
+    model = Review
+    extra = 0
+    fields = ('user', 'comment', 'rating', 'created_date')
+    readonly_fields = ('created_date',)
+
 # Movie Admin Configuration
 class MovieAdmin(admin.ModelAdmin):
-    list_display = ('name', 'price', 'genre')
+    save_on_top = True
+    list_display = ('name', 'price', 'genre', 'image_thumbnail')
     search_fields = ('name', 'genre')
     list_filter = ('genre',)
     ordering = ('name',)
-    readonly_fields = ('image_url',)
+    inlines = [ReviewInline]
+    fieldsets = (
+        (None, {
+            'fields': ('name', 'price', 'description', 'genre', 'image', 'image_url', 'image_preview')
+        }),
+    )
+    readonly_fields = ('image_preview',)
+
+    def image_preview(self, obj):
+        """
+        Display a larger preview of the image (uploaded or via URL) on the detail page.
+        """
+        if obj.image:
+            return mark_safe(f'<img src="{obj.image.url}" style="max-height: 200px;" />')
+        elif obj.image_url:
+            return mark_safe(f'<img src="{obj.image_url}" style="max-height: 200px;" />')
+        return "No Image Available"
+    image_preview.short_description = "Image Preview"
+
+    def image_thumbnail(self, obj):
+        """
+        Display a small thumbnail of the image for the list view.
+        """
+        if obj.image:
+            return mark_safe(f'<img src="{obj.image.url}" style="max-height: 50px;" />')
+        elif obj.image_url:
+            return mark_safe(f'<img src="{obj.image_url}" style="max-height: 50px;" />')
+        return "No Image"
+    image_thumbnail.short_description = "Thumbnail"
 
 admin.site.register(Movie, MovieAdmin)
 
 # Review Admin Configuration
 class ReviewAdmin(admin.ModelAdmin):
+    save_on_top = True
     list_display = ('user_link', 'movie_link', 'star_rating', 'created_date')
     search_fields = ('movie__name', 'user__username')
     list_filter = ('rating', 'created_date')
@@ -49,7 +86,9 @@ class OrderItemInline(admin.TabularInline):
     autocomplete_fields = ['movie']
 
 class OrderAdmin(admin.ModelAdmin):
-    list_display = ('user_link', 'date', 'total_amount')
+    save_on_top = True
+    date_hierarchy = 'date'
+    list_display = ('user_link', 'date', 'total_amount', 'item_count')
     search_fields = ('user__username', 'date')
     list_filter = ('date',)
     inlines = [OrderItemInline]
@@ -65,9 +104,14 @@ class OrderAdmin(admin.ModelAdmin):
     def total_amount(self, obj):
         return sum(item.price * item.quantity for item in obj.items.all())
 
+    def item_count(self, obj):
+        return obj.items.count()
+    item_count.short_description = 'Item Count'
+
 admin.site.register(Order, OrderAdmin)
 
 class OrderItemAdmin(admin.ModelAdmin):
+    save_on_top = True
     list_display = ('order', 'movie_link', 'quantity', 'price')
     autocomplete_fields = ['movie', 'order']
     list_select_related = ('movie', 'order')
