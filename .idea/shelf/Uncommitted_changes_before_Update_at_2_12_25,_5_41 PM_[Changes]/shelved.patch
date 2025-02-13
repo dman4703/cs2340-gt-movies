@@ -1,0 +1,178 @@
+Index: .idea/misc.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<project version=\"4\">\n  <component name=\"Black\">\n    <option name=\"sdkName\" value=\"Python 3.13 (cs2340-gt-movies)\" />\n  </component>\n  <component name=\"ProjectRootManager\" version=\"2\" project-jdk-name=\"Python 3.11 virtualenv at C:\\Users\\patri\\PycharmProjects\\mysite\\.venv\" project-jdk-type=\"Python SDK\" />\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/misc.xml b/.idea/misc.xml
+--- a/.idea/misc.xml	(revision f2a6f78c01188287bc45aae402e9b7e99f8c51d2)
++++ b/.idea/misc.xml	(date 1739400076825)
+@@ -3,5 +3,5 @@
+   <component name="Black">
+     <option name="sdkName" value="Python 3.13 (cs2340-gt-movies)" />
+   </component>
+-  <component name="ProjectRootManager" version="2" project-jdk-name="Python 3.11 virtualenv at C:\Users\patri\PycharmProjects\mysite\.venv" project-jdk-type="Python SDK" />
++  <component name="ProjectRootManager" version="2" project-jdk-name="Python 3.10 (cs2340-gt-movies)" project-jdk-type="Python SDK" />
+ </project>
+\ No newline at end of file
+Index: .idea/workspace.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<project version=\"4\">\n  <component name=\"AutoImportSettings\">\n    <option name=\"autoReloadType\" value=\"SELECTIVE\" />\n  </component>\n  <component name=\"ChangeListManager\">\n    <list default=\"true\" id=\"93c46571-e8b9-4fad-a4db-4b41aec17692\" name=\"Changes\" comment=\"movie list feature\" />\n    <option name=\"SHOW_DIALOG\" value=\"false\" />\n    <option name=\"HIGHLIGHT_CONFLICTS\" value=\"true\" />\n    <option name=\"HIGHLIGHT_NON_ACTIVE_CHANGELIST\" value=\"false\" />\n    <option name=\"LAST_RESOLUTION\" value=\"IGNORE\" />\n  </component>\n  <component name=\"FileTemplateManagerImpl\">\n    <option name=\"RECENT_TEMPLATES\">\n      <list>\n        <option value=\"Python Script\" />\n        <option value=\"HTML File\" />\n      </list>\n    </option>\n  </component>\n  <component name=\"Git.Settings\">\n    <option name=\"RECENT_GIT_ROOT_PATH\" value=\"$PROJECT_DIR$\" />\n  </component>\n  <component name=\"GitHubPullRequestSearchHistory\">{\n  &quot;lastFilter&quot;: {\n    &quot;state&quot;: &quot;OPEN&quot;,\n    &quot;assignee&quot;: &quot;patrickhuynh117&quot;\n  }\n}</component>\n  <component name=\"GithubPullRequestsUISettings\">{\n  &quot;selectedUrlAndAccountId&quot;: {\n    &quot;url&quot;: &quot;https://github.com/dman4703/cs2340-gt-movies.git&quot;,\n    &quot;accountId&quot;: &quot;03cff19d-1cc4-4cfc-aa1a-8221dfb8db05&quot;\n  }\n}</component>\n  <component name=\"ProblemsViewState\">\n    <option name=\"selectedTabId\" value=\"CurrentFile\" />\n  </component>\n  <component name=\"ProjectColorInfo\">{\n  &quot;associatedIndex&quot;: 2\n}</component>\n  <component name=\"ProjectId\" id=\"2sMe0a27z4A8cBQSWHx08yRDf2B\" />\n  <component name=\"ProjectViewState\">\n    <option name=\"hideEmptyMiddlePackages\" value=\"true\" />\n    <option name=\"showLibraryContents\" value=\"true\" />\n  </component>\n  <component name=\"PropertiesComponent\"><![CDATA[{\n  \"keyToString\": {\n    \"DefaultHtmlFileTemplate\": \"HTML File\",\n    \"JavaScript Debug.base.html.executor\": \"Run\",\n    \"Python.manage.executor\": \"Run\",\n    \"Python.settings.executor\": \"Run\",\n    \"Python.urls.executor\": \"Run\",\n    \"Python.views.executor\": \"Run\",\n    \"RunOnceActivity.ShowReadmeOnStart\": \"true\",\n    \"RunOnceActivity.git.unshallow\": \"true\",\n    \"git-widget-placeholder\": \"main\",\n    \"last_opened_file_path\": \"C:/Users/patri/PycharmProjects/cs2340-gt-movies\",\n    \"node.js.detected.package.eslint\": \"true\",\n    \"node.js.detected.package.tslint\": \"true\",\n    \"node.js.selected.package.eslint\": \"(autodetect)\",\n    \"node.js.selected.package.tslint\": \"(autodetect)\",\n    \"nodejs_package_manager_path\": \"npm\",\n    \"vue.rearranger.settings.migration\": \"true\"\n  }\n}]]></component>\n  <component name=\"RecentsManager\">\n    <key name=\"MoveFile.RECENT_KEYS\">\n      <recent name=\"C:\\Users\\patri\\PycharmProjects\\cs2340-gt-movies\\home\" />\n    </key>\n  </component>\n  <component name=\"SharedIndexes\">\n    <attachedChunks>\n      <set>\n        <option value=\"bundled-js-predefined-d6986cc7102b-deb605915726-JavaScript-PY-243.22562.220\" />\n        <option value=\"bundled-python-sdk-0fc6c617c4bd-9a18a617cbe4-com.jetbrains.pycharm.pro.sharedIndexes.bundled-PY-243.22562.220\" />\n      </set>\n    </attachedChunks>\n  </component>\n  <component name=\"SpellCheckerSettings\" RuntimeDictionaries=\"0\" Folders=\"0\" CustomDictionaries=\"0\" DefaultDictionary=\"application-level\" UseSingleDictionary=\"true\" transferred=\"true\" />\n  <component name=\"TaskManager\">\n    <task active=\"true\" id=\"Default\" summary=\"Default task\">\n      <changelist id=\"93c46571-e8b9-4fad-a4db-4b41aec17692\" name=\"Changes\" comment=\"\" />\n      <created>1738269648317</created>\n      <option name=\"number\" value=\"Default\" />\n      <option name=\"presentableId\" value=\"Default\" />\n      <updated>1738269648317</updated>\n      <workItem from=\"1738269649561\" duration=\"1827000\" />\n      <workItem from=\"1738271570589\" duration=\"973000\" />\n      <workItem from=\"1738354755945\" duration=\"17501000\" />\n      <workItem from=\"1738606239172\" duration=\"2660000\" />\n      <workItem from=\"1738872341597\" duration=\"1251000\" />\n    </task>\n    <task id=\"LOCAL-00001\" summary=\"Test commit for pull\">\n      <option name=\"closed\" value=\"true\" />\n      <created>1738356049936</created>\n      <option name=\"number\" value=\"00001\" />\n      <option name=\"presentableId\" value=\"LOCAL-00001\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1738356049936</updated>\n    </task>\n    <task id=\"LOCAL-00002\" summary=\"Test commit for pull #2\">\n      <option name=\"closed\" value=\"true\" />\n      <created>1738356312805</created>\n      <option name=\"number\" value=\"00002\" />\n      <option name=\"presentableId\" value=\"LOCAL-00002\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1738356312805</updated>\n    </task>\n    <task id=\"LOCAL-00003\" summary=\"Test commit for pull #2\">\n      <option name=\"closed\" value=\"true\" />\n      <created>1738459944939</created>\n      <option name=\"number\" value=\"00003\" />\n      <option name=\"presentableId\" value=\"LOCAL-00003\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1738459944939</updated>\n    </task>\n    <task id=\"LOCAL-00004\" summary=\"movie list feature\">\n      <option name=\"closed\" value=\"true\" />\n      <created>1738873724741</created>\n      <option name=\"number\" value=\"00004\" />\n      <option name=\"presentableId\" value=\"LOCAL-00004\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1738873724741</updated>\n    </task>\n    <option name=\"localTasksCounter\" value=\"5\" />\n    <servers />\n  </component>\n  <component name=\"TypeScriptGeneratedFilesManager\">\n    <option name=\"version\" value=\"3\" />\n  </component>\n  <component name=\"VcsManagerConfiguration\">\n    <MESSAGE value=\"Test commit for pull\" />\n    <MESSAGE value=\"Test commit for pull #2\" />\n    <MESSAGE value=\"movie list feature\" />\n    <option name=\"LAST_COMMIT_MESSAGE\" value=\"movie list feature\" />\n  </component>\n  <component name=\"com.intellij.coverage.CoverageDataManagerImpl\">\n    <SUITE FILE_PATH=\"coverage/cs2340_gt_movies$settings.coverage\" NAME=\"settings Coverage Results\" MODIFIED=\"1738270228524\" SOURCE_PROVIDER=\"com.intellij.coverage.DefaultCoverageFileProvider\" RUNNER=\"coverage.py\" COVERAGE_BY_TEST_ENABLED=\"false\" COVERAGE_TRACING_ENABLED=\"false\" WORKING_DIRECTORY=\"$PROJECT_DIR$/moviesstore\" />\n    <SUITE FILE_PATH=\"coverage/cs2340_gt_movies$manage.coverage\" NAME=\"manage Coverage Results\" MODIFIED=\"1738355606869\" SOURCE_PROVIDER=\"com.intellij.coverage.DefaultCoverageFileProvider\" RUNNER=\"coverage.py\" COVERAGE_BY_TEST_ENABLED=\"false\" COVERAGE_TRACING_ENABLED=\"false\" WORKING_DIRECTORY=\"$PROJECT_DIR$\" />\n    <SUITE FILE_PATH=\"coverage/cs2340_gt_movies$urls.coverage\" NAME=\"urls Coverage Results\" MODIFIED=\"1738270911845\" SOURCE_PROVIDER=\"com.intellij.coverage.DefaultCoverageFileProvider\" RUNNER=\"coverage.py\" COVERAGE_BY_TEST_ENABLED=\"false\" COVERAGE_TRACING_ENABLED=\"false\" WORKING_DIRECTORY=\"$PROJECT_DIR$/home\" />\n    <SUITE FILE_PATH=\"coverage/cs2340_gt_movies$views.coverage\" NAME=\"views Coverage Results\" MODIFIED=\"1738271625346\" SOURCE_PROVIDER=\"com.intellij.coverage.DefaultCoverageFileProvider\" RUNNER=\"coverage.py\" COVERAGE_BY_TEST_ENABLED=\"false\" COVERAGE_TRACING_ENABLED=\"false\" WORKING_DIRECTORY=\"$PROJECT_DIR$/home\" />\n  </component>\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/workspace.xml b/.idea/workspace.xml
+--- a/.idea/workspace.xml	(revision f2a6f78c01188287bc45aae402e9b7e99f8c51d2)
++++ b/.idea/workspace.xml	(date 1739400045165)
+@@ -4,7 +4,9 @@
+     <option name="autoReloadType" value="SELECTIVE" />
+   </component>
+   <component name="ChangeListManager">
+-    <list default="true" id="93c46571-e8b9-4fad-a4db-4b41aec17692" name="Changes" comment="movie list feature" />
++    <list default="true" id="93c46571-e8b9-4fad-a4db-4b41aec17692" name="Changes" comment="movie list feature">
++      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
++    </list>
+     <option name="SHOW_DIALOG" value="false" />
+     <option name="HIGHLIGHT_CONFLICTS" value="true" />
+     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+@@ -27,12 +29,12 @@
+     &quot;assignee&quot;: &quot;patrickhuynh117&quot;
+   }
+ }</component>
+-  <component name="GithubPullRequestsUISettings">{
+-  &quot;selectedUrlAndAccountId&quot;: {
+-    &quot;url&quot;: &quot;https://github.com/dman4703/cs2340-gt-movies.git&quot;,
+-    &quot;accountId&quot;: &quot;03cff19d-1cc4-4cfc-aa1a-8221dfb8db05&quot;
++  <component name="GithubPullRequestsUISettings"><![CDATA[{
++  "selectedUrlAndAccountId": {
++    "url": "git@github.com:dman4703/cs2340-gt-movies.git",
++    "accountId": "f1f0cce8-e4c9-4c02-a87c-98501f2b56bb"
+   }
+-}</component>
++}]]></component>
+   <component name="ProblemsViewState">
+     <option name="selectedTabId" value="CurrentFile" />
+   </component>
+@@ -44,26 +46,59 @@
+     <option name="hideEmptyMiddlePackages" value="true" />
+     <option name="showLibraryContents" value="true" />
+   </component>
+-  <component name="PropertiesComponent"><![CDATA[{
+-  "keyToString": {
+-    "DefaultHtmlFileTemplate": "HTML File",
+-    "JavaScript Debug.base.html.executor": "Run",
+-    "Python.manage.executor": "Run",
+-    "Python.settings.executor": "Run",
+-    "Python.urls.executor": "Run",
+-    "Python.views.executor": "Run",
+-    "RunOnceActivity.ShowReadmeOnStart": "true",
+-    "RunOnceActivity.git.unshallow": "true",
+-    "git-widget-placeholder": "main",
+-    "last_opened_file_path": "C:/Users/patri/PycharmProjects/cs2340-gt-movies",
+-    "node.js.detected.package.eslint": "true",
+-    "node.js.detected.package.tslint": "true",
+-    "node.js.selected.package.eslint": "(autodetect)",
+-    "node.js.selected.package.tslint": "(autodetect)",
+-    "nodejs_package_manager_path": "npm",
+-    "vue.rearranger.settings.migration": "true"
+-  }
+-}]]></component>
++  <component name="PropertiesComponent">{
++  &quot;keyToString&quot;: {
++    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
++    &quot;JavaScript Debug.base.html.executor&quot;: &quot;Run&quot;,
++    &quot;Python.manage.executor&quot;: &quot;Run&quot;,
++    &quot;Python.settings.executor&quot;: &quot;Run&quot;,
++    &quot;Python.urls.executor&quot;: &quot;Run&quot;,
++    &quot;Python.views.executor&quot;: &quot;Run&quot;,
++    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
++    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
++    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
++    &quot;last_opened_file_path&quot;: &quot;C:/Users/patri/PycharmProjects/cs2340-gt-movies&quot;,
++    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
++    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
++    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
++    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
++    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
++    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
++  }
++}</component>
++  <component name="RdControllerToolWindowsLayoutState" isNewUi="true">
++    <layout>
++      <window_info id="Bookmarks" show_stripe_button="false" side_tool="true" />
++      <window_info id="Merge Requests" show_stripe_button="false" />
++      <window_info id="Commit_Guest" show_stripe_button="false" />
++      <window_info id="Pull Requests" show_stripe_button="false" />
++      <window_info id="Learn" show_stripe_button="false" />
++      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.08613281" />
++      <window_info id="Commit" order="1" weight="0.18808594" />
++      <window_info id="Structure" order="2" side_tool="true" weight="0.25" />
++      <window_info anchor="bottom" id="Database Changes" show_stripe_button="false" />
++      <window_info anchor="bottom" id="TypeScript" show_stripe_button="false" />
++      <window_info anchor="bottom" id="TODO" show_stripe_button="false" />
++      <window_info anchor="bottom" id="HfCacheToolWindow" show_stripe_button="false" />
++      <window_info anchor="bottom" id="File Transfer" show_stripe_button="false" />
++      <window_info anchor="bottom" id="Version Control" order="0" />
++      <window_info anchor="bottom" id="Problems" order="1" />
++      <window_info anchor="bottom" id="Problems View" order="2" />
++      <window_info active="true" anchor="bottom" id="Terminal" order="3" visible="true" weight="0.3301006" />
++      <window_info anchor="bottom" id="Services" order="4" />
++      <window_info anchor="bottom" id="Python Packages" order="5" weight="0.1" />
++      <window_info anchor="bottom" id="Python Console" order="6" weight="0.1" />
++      <window_info anchor="right" id="Endpoints" show_stripe_button="false" />
++      <window_info anchor="right" id="Coverage" show_stripe_button="false" side_tool="true" />
++      <window_info anchor="right" id="SciView" show_stripe_button="false" />
++      <window_info anchor="right" content_ui="combo" id="Notifications" order="0" weight="0.25" />
++      <window_info anchor="right" id="AIAssistant" order="1" weight="0.25" />
++      <window_info anchor="right" id="Database" order="2" weight="0.25" />
++      <window_info anchor="right" id="Gradle" order="3" weight="0.25" />
++      <window_info anchor="right" id="Maven" order="4" weight="0.25" />
++      <window_info anchor="right" id="Plots" order="5" weight="0.1" />
++    </layout>
++  </component>
+   <component name="RecentsManager">
+     <key name="MoveFile.RECENT_KEYS">
+       <recent name="C:\Users\patri\PycharmProjects\cs2340-gt-movies\home" />
+@@ -72,8 +107,8 @@
+   <component name="SharedIndexes">
+     <attachedChunks>
+       <set>
+-        <option value="bundled-js-predefined-d6986cc7102b-deb605915726-JavaScript-PY-243.22562.220" />
+-        <option value="bundled-python-sdk-0fc6c617c4bd-9a18a617cbe4-com.jetbrains.pycharm.pro.sharedIndexes.bundled-PY-243.22562.220" />
++        <option value="bundled-js-predefined-d6986cc7102b-5c90d61e3bab-JavaScript-PY-242.23726.56" />
++        <option value="bundled-python-sdk-93feb15fbbf0-399fe30bd8c1-com.jetbrains.pycharm.pro.sharedIndexes.bundled-PY-242.23726.56" />
+       </set>
+     </attachedChunks>
+   </component>
+@@ -90,6 +125,7 @@
+       <workItem from="1738354755945" duration="17501000" />
+       <workItem from="1738606239172" duration="2660000" />
+       <workItem from="1738872341597" duration="1251000" />
++      <workItem from="1739400031054" duration="15000" />
+     </task>
+     <task id="LOCAL-00001" summary="Test commit for pull">
+       <option name="closed" value="true" />
+Index: .idea/cs2340-gt-movies.iml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<module type=\"PYTHON_MODULE\" version=\"4\">\n  <component name=\"NewModuleRootManager\">\n    <content url=\"file://$MODULE_DIR$\">\n      <excludeFolder url=\"file://$MODULE_DIR$/.venv\" />\n    </content>\n    <orderEntry type=\"jdk\" jdkName=\"Python 3.11 virtualenv at C:\\Users\\patri\\PycharmProjects\\mysite\\.venv\" jdkType=\"Python SDK\" />\n    <orderEntry type=\"sourceFolder\" forTests=\"false\" />\n  </component>\n</module>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/cs2340-gt-movies.iml b/.idea/cs2340-gt-movies.iml
+--- a/.idea/cs2340-gt-movies.iml	(revision f2a6f78c01188287bc45aae402e9b7e99f8c51d2)
++++ b/.idea/cs2340-gt-movies.iml	(date 1739400076815)
+@@ -3,8 +3,9 @@
+   <component name="NewModuleRootManager">
+     <content url="file://$MODULE_DIR$">
+       <excludeFolder url="file://$MODULE_DIR$/.venv" />
++      <excludeFolder url="file://$MODULE_DIR$/venv" />
+     </content>
+-    <orderEntry type="jdk" jdkName="Python 3.11 virtualenv at C:\Users\patri\PycharmProjects\mysite\.venv" jdkType="Python SDK" />
++    <orderEntry type="inheritedJdk" />
+     <orderEntry type="sourceFolder" forTests="false" />
+   </component>
+ </module>
+\ No newline at end of file
