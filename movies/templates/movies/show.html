@@ -7,9 +7,37 @@
       <div class="col-md-6 mx-auto mb-3">
         <h2>{{ template_data.movie.name }}</h2>
         <hr />
-        <p><b>Genre:</b> {{ template_data.movie.get_genre_display }}</p>
-        <p><b>Description:</b> {{ template_data.movie.description }}</p>
-        <p><b>Price:</b> ${{ template_data.movie.price }}</p>
+        <p>
+          <b>Genre:</b> {{ template_data.movie.get_genre_display }}
+        </p>
+        <p>
+          <b>Description:</b> {{ template_data.movie.description }}
+        </p>
+        <p>
+          <b>Price:</b> ${{ template_data.movie.price }}
+        </p>
+        <p class="card-text">
+          <form method="post"
+            action="{% url 'cart.add'
+            id=template_data.movie.id %}">
+            <div class="row">
+              {% csrf_token %}
+              <div class="col-auto">
+                <div class="input-group col-auto">
+                <div class="input-group-text">Quantity
+                </div>
+                <input type="number" min="1" max="10"
+                class="form-control quantity-input"
+                name="quantity" value="1">
+                </div>
+              </div>
+              <div class="col-auto">
+                <button class="btn bg-dark text-white"
+                type="submit">Add to cart</button>
+              </div>
+            </div>
+          </form>
+        </p>
         <h2>Reviews</h2>
         <hr />
         <ul class="list-group">
@@ -27,8 +55,10 @@
                href="{% url 'movies.edit_review' id=template_data.movie.id review_id=review.id %}">
                 Edit
             </a>
-            <a class="btn btn-danger" href="{% url 'movies.delete_review' id=template_data.movie.idreview_id=review.id %}">
-              Delete
+            <a class="btn btn-danger"
+              href="{% url 'movies.delete_review'
+              id=template_data.movie.id
+              review_id=review.id %}">Delete
             </a>
             {% endif %}
           </li>
