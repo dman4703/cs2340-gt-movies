@@ -7,7 +7,8 @@
     <list default="true" id="93c46571-e8b9-4fad-a4db-4b41aec17692" name="Changes" comment="movie list feature">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/movies/templates/movies/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/movies/templates/movies/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/movies/templates/movies/show.html" beforeDir="false" afterPath="$PROJECT_DIR$/movies/templates/movies/show.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/moviesstore/static/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/moviesstore/static/css/style.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -137,7 +138,7 @@
       <workItem from="1738872341597" duration="1251000" />
       <workItem from="1738938965619" duration="14625000" />
       <workItem from="1739480693928" duration="1323000" />
-      <workItem from="1739496473210" duration="2248000" />
+      <workItem from="1739496473210" duration="3340000" />
     </task>
     <task id="LOCAL-00001" summary="Test commit for pull">
       <option name="closed" value="true" />
