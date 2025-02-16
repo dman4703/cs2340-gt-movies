@@ -6,9 +6,9 @@
   <component name="ChangeListManager">
     <list default="true" id="93c46571-e8b9-4fad-a4db-4b41aec17692" name="Changes" comment="movie list feature">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/movies/templates/movies/show.html" beforeDir="false" afterPath="$PROJECT_DIR$/movies/templates/movies/show.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/moviesstore/static/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/moviesstore/static/css/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/movies/templates/movies/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/movies/templates/movies/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/moviesstore/static/css/custom.css" beforeDir="false" afterPath="$PROJECT_DIR$/moviesstore/static/css/custom.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/moviesstore/templates/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/moviesstore/templates/base.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -66,7 +66,7 @@
     "Python.views.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "movies",
+    "git-widget-placeholder": "#14 on frontend",
     "last_opened_file_path": "C:/Users/patri/PycharmProjects/cs2340-gt-movies",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
