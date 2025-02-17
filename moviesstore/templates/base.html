@@ -17,16 +17,18 @@
     </script>
     <link rel="stylesheet" type="text/css"
           href="{%static 'css/style.css' %}">
+    <link rel="stylesheet" type="text/css"
+          href="{%static 'css/custom.css' %}">
     <meta name="viewport" content="width=device-width, initial-scale=1" />
   </head>
   <body>
     <!-- Header -->
-    <nav class="p-3 navbar navbar-dark bg-dark
+    <nav class="p-3 navbar navbar-dark bg-blue
          navbar-expand-lg">
       <div class="container">
         <a class="navbar-brand"
            href="{% url 'home.index' %}">
-          <img src="{% static 'img/logo.png' %}" alt="logo"
+          <img src="{% static 'img/logo.png' %}" alt="GT Logo"
                height="40" />
         </a>
         <button class="navbar-toggler" type="button"
@@ -62,12 +64,12 @@
       </div>
     </nav>
     <!-- Header -->
-    <div>
+    <div class="pb-6 bg-yellow content">
       {% block content %}
       {% endblock content %}
     </div>
     <!-- Footer -->
-    <section class="p-3 ms-footer d-none d-md-block">
+    <section class="p-3 ms-footer d-none d-md-block b-0 w-100 bottom-0">
       <div class="container">
         <div class="row mt-3 text-white">
           <div class="col-md-6 col-lg-6 col-xl-6
@@ -105,22 +107,6 @@
               +81 03-3333-3333
             </p>
           </div>
-        </div>
-      </div>
-    </section>
-    <section class="p-3 ms-footer-bottom bg-dark">
-      <div class="container d-flex
-           justify-content-between">
-        <div class="me-5 text-white">
-          <span>DESIGNED BY
-            <a href="https://www.x.com/danielgarax"
-            target="_blank">DANIEL CORREA</a> &
-            <a href="https://www.x.com/greglim81"
-            target="_blank">GREG LIM</a>
-          </span>
-        </div>
-        <div class="text-white">
-          <span>© Copyright - 2024</span>
         </div>
       </div>
     </section>

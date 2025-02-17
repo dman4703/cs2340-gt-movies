@@ -13,7 +13,7 @@
               <div class="col-auto mx-auto w-100">
                 <div class="input-group col-auto">
                   <input type="text" class="form-control" name="search" placeholder="Search movies...">
-                  <button class="btn bg-dark text-white" type="submit">Search</button>
+                  <button class="btn bg-blue text-white" type="submit">Search</button>
                 </div>
               </div>
             </div>
@@ -22,26 +22,28 @@
       </div>
     </div>
     <div class="row">
-      {% for movie in template_data.movies %}
-      <div class="col-md-4 col-lg-3 mb-3">
-        <div class="p-2 card align-items-center pt-4">
-          {% if movie.image %}
-          <img src="{{ movie.image.url }}" class="card-img-top rounded img-card-200" alt="{{ movie.name }}">
-          {% elif movie.image_url %}
-          <img src="{{ movie.image_url }}" class="card-img-top rounded img-card-200" alt="{{ movie.name }}">
-          {% else %}
-          <p>No image available.</p>
-          {% endif %}
-          <div class="card-body text-center">
-            <a href="{% url 'movies.show' id=movie.id %}" class="btn bg-dark text-white">{{ movie.name }}</a>
-            <p class="mt-2"><b>Genre:</b> {{ movie.get_genre_display }}</p>
-            <p><b>Price:</b> ${{ movie.price }}</p>
+      <div class="row bg-white rounded">
+        {% for movie in template_data.movies %}
+        <div class="col-md-4 col-lg-3 mt-3 mb-3">
+          <div class="p-2 card align-items-center pt-4">
+            {% if movie.image %}
+            <img src="{{ movie.image.url }}" class="card-img-top rounded img-card-200" alt="{{ movie.name }}">
+            {% elif movie.image_url %}
+            <img src="{{ movie.image_url }}" class="card-img-top rounded img-card-200" alt="{{ movie.name }}">
+            {% else %}
+            <p>No image available.</p>
+            {% endif %}
+            <div class="card-body text-center">
+              <a href="{% url 'movies.show' id=movie.id %}" class="btn bg-blue text-white">{{ movie.name }}</a>
+              <p class="mt-2"><b>Genre:</b> {{ movie.get_genre_display }}</p>
+              <p><b>Price:</b> ${{ movie.price }}</p>
+            </div>
           </div>
         </div>
+        {% empty %}
+        <p class="text-center">No movies found.</p>
+        {% endfor %}
       </div>
-      {% empty %}
-      <p class="text-center">No movies found.</p>
-      {% endfor %}
     </div>
   </div>
 </div>

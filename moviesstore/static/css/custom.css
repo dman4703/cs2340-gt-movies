@@ -1,0 +1,10 @@
+.bg-blue {
+    background-color: #003057;
+}
+.bg-yellow {
+    background-color: #b3a369;
+}
+.content {
+    min-height: calc(100vh - 300px);
+}
+
