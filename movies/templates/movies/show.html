@@ -108,9 +108,9 @@
       </div>
       <div class="col-md-6 mx-auto mb-3 text-center">
         {% if template_data.movie.image %}
-          <img src="{{ template_data.movie.image.url }}" class="rounded img-card-400" alt="{{ template_data.movie.name }}" />
+          <img style="max-height: 90%; max-width: 75%;" src="{{ template_data.movie.image.url }}" class="rounded img-card-400" alt="{{ template_data.movie.name }}" />
         {% elif template_data.movie.image_url %}
-          <img src="{{ template_data.movie.image_url }}" class="rounded img-card-400" alt="{{ template_data.movie.name }}" />
+          <img style="max-height: 90%; max-width: 75%;" src="{{ template_data.movie.image_url }}" class="rounded img-card-400" alt="{{ template_data.movie.name }}" />
         {% else %}
           <p>No image available.</p>
         {% endif %}
