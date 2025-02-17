@@ -13,7 +13,7 @@
               <div class="col-auto mx-auto w-100">
                 <div class="input-group col-auto">
                   <input type="text" class="form-control" name="search" placeholder="Search movies...">
-                  <button class="btn bg-blue text-white" type="submit">Search</button>
+                  <button class="btn-custom" type="submit">Search</button>
                 </div>
               </div>
             </div>
@@ -34,7 +34,7 @@
             <p>No image available.</p>
             {% endif %}
             <div class="card-body text-center">
-              <a href="{% url 'movies.show' id=movie.id %}" class="btn bg-blue text-white">{{ movie.name }}</a>
+              <a href="{% url 'movies.show' id=movie.id %}" class="btn-custom">{{ movie.name }}</a>
               <p class="mt-2"><b>Genre:</b> {{ movie.get_genre_display }}</p>
               <p><b>Price:</b> ${{ movie.price }}</p>
             </div>
