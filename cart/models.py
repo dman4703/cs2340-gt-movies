@@ -52,21 +52,10 @@ class Order(models.Model):
 
 
 class Item(models.Model):
-    """
-    Items in a user's order (1:N from Order).
-    """
     id = models.AutoField(primary_key=True)
-    price = models.IntegerField() # maybe make decimal field
-    quantity = models.PositiveIntegerField(
-        default=1,
-        validators=[MinValueValidator(1)]
-    )
-    # related_name='items' so you can do: order.items.all()
-    order = models.ForeignKey(
-        Order,
-        on_delete=models.CASCADE,
-        related_name='items'
-    )
+    price = models.IntegerField()
+    quantity = models.IntegerField()
+    order = models.ForeignKey(Order, on_delete=models.CASCADE)
     movie = models.ForeignKey(Movie, on_delete=models.CASCADE)
 
     def __str__(self):
