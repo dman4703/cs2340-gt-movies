@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+{% extends 'base.html' %}
+{% block content %}
+<div class="p-3">
+  <div class="container">
+    <div class="row mt-3">
+      <div class="col mx-auto mb-3">
+        <h2>Edit Review</h2>
+        <hr />
+        <form method="POST">
+          {% csrf_token %}
+          <p>
+            <label for="comment">Comment:</label>
+            <textarea name="comment" required
+            class="form-control" id="comment">{{template_data.review.comment }}</textarea>
+          </p>
+          <div class="d-flex justify-content-between align-items-center">
+            <label for="rating">Rating:</label>
+            <input type="range" id="rating" name="rating" min="1" max="5" value="3" class="form-range"
+                   style="width: 50%;">
+            <span id="rating-value" class="ms-2"></span>
+          </div>
+          <div class="text-start">
+            <button type="submit"
+              class="btn bg-dark text-white">Edit Review
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock content %}
+</body>
+</html>
