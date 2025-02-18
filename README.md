@@ -1,6 +1,6 @@
 # GT Movies Store
 
-A Django-based web application for browsing and purchasing movies online.
+A Django-based web application for browsing and purchasing movies online. This project follows the process featured in the textbook *“Django 5 for the Impatient: Learn the core concepts of Django to develop Python web applications”* by Dr. Daniel Correa and Mr. Greg Lim.
 
 ## Course Information
 
@@ -116,3 +116,7 @@ gt-movies-store/
 3. Commit your changes (`git commit -m 'Add some amazing feature'`)
 4. Push to the branch (`git push origin feature/amazing-feature`)
 5. Open a Pull Request
+
+## License
+
+This project is licensed under the MIT License - see the LICENSE file for details.
