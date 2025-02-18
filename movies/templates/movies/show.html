@@ -41,9 +41,12 @@
         <ul class="list-group">
           {% for review in template_data.reviews %}
           <li class="list-group-item pb-3 pt-3">
-            <h5 class="card-title">
-              Review by {{ review.user.username }}
-            </h5>
+            <div class="d-flex justify-content-between">
+              <h5 class="card-title">
+                Review by {{ review.user.username }}
+              </h5>
+              <h5 class="fw-bold text-muted">Rating: {{ review.rating }}/5</h5>
+            </div>
             <h6 class="card-subtitle mb-2 text-muted">
              {{ review.date }}
             </h6>
@@ -79,7 +82,7 @@
                       <label for="rating">Rating:</label>
                       <input type="range" id="rating" name="rating" min="1" max="5" value="3" class="form-range"
                              style="width: 50%;">
-                      <span id="rating-value" class="ms-2">3</span>
+                      <div><span id="rating-value" class="ms-2">3</span> / 5</div>
                     </div>
                     <div class="text-center mt-3">
                       <button type="submit" class="btn-custom">

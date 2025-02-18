@@ -1,22 +1,61 @@
 {% extends 'base.html' %}
+{% load static %}
 {% block content %}
-<header class="masthead bg-index text-white text-center py-4">
-  <div class="container d-flex align-items-center flex-column pt-2">
-    <h2>Movies Store</h2>
-    <p>Your Ticket to Unlimited Entertainment!</p>
+<!-- Hero Section with Overlay -->
+<section class="masthead bg-index text-white text-center py-5" style="position: relative;">
+  <!-- Dark overlay -->
+  <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0,0,0,0.5);"></div>
+  <div class="container d-flex flex-column align-items-center justify-content-center" style="position: relative; z-index: 2;">
+    <h1 class="display-4 fw-bold">Welcome to Movies Store</h1>
+    <p class="lead mb-4">Your Ticket to Unlimited Entertainment!</p>
+    <a href="{% url 'movies.index' %}" class="btn btn-custom btn-lg">Browse Movies</a>
   </div>
-</header>
-<div class="p-3">
+</section>
+
+<!-- About Section -->
+<section class="py-5">
   <div class="container">
-    <div class="row mt-3">
-      <div class="col mx-auto text-center mb-3">
-        <h4 style="max-width: 50%; margin: 0 auto">Welcome to the GT Movies Store, your buzzing online
-          destination for a cinematic adventure like no
-          other! Dive into the world of movies from the
-          comfort of your own home with our user-
-          friendly and immersive online movie store.</h4>
+    <div class="row align-items-center">
+      <div class="col-md-6">
+        <h2 class="mb-4">Experience the Magic of Cinema</h2>
+        <p class="mb-4">
+          Step into a world where every movie is an adventure. From blockbuster hits to indie gems,
+          our curated selection brings the magic of the movies right to your screen.
+          Whether you're in the mood for action-packed thrillers or heartwarming dramas,
+          your next cinematic journey starts here.
+        </p>
+        <a href="{% url 'movies.index' %}" class="btn btn-custom">Explore Now</a>
+      </div>
+      <div class="col-md-6">
+        <img src="{% static 'img/moviestore_logo.jpg' %}" alt="Movies Store" class="img-fluid rounded shadow">
       </div>
     </div>
   </div>
-</div>
+</section>
+
+<!-- Featured Movies Grid -->
+<section class="py-5 bg-light">
+  <div class="container">
+    <h2 class="text-center mb-5">Featured Movies</h2>
+    <div class="row justify-content-center">
+      {% for movie in template_data.featured_movies %}
+      <div class="col-md-4">
+        <div class="d-flex justify-content-center align-items-center" style="height: 300px;">
+          <a href="{% url 'movies.show' id=movie.id %}" style="display: inline-block;">
+            {% if movie.image %}
+              <img src="{{ movie.image.url }}"
+                   alt="{{ movie.name }}"
+                   style="max-height: 300px; width: auto; object-fit: contain;">
+            {% elif movie.image_url %}
+              <img src="{{ movie.image_url }}"
+                   alt="{{ movie.name }}"
+                   style="max-height: 300px; width: auto; object-fit: contain;">
+            {% endif %}
+          </a>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
 {% endblock content %}
