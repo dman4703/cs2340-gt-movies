@@ -88,7 +88,7 @@ class OrderItemInline(admin.TabularInline):
 class OrderAdmin(admin.ModelAdmin):
     save_on_top = True
     date_hierarchy = 'date'
-    list_display = ('user_link', 'date', 'total_amount', 'item_count')
+    list_display = ('user_link', 'date', 'total_amount', 'item_count', 'item_summary')
     search_fields = ('user__username', 'date')
     list_filter = ('date',)
     inlines = [OrderItemInline]
@@ -108,13 +108,28 @@ class OrderAdmin(admin.ModelAdmin):
         return obj.items.count()
     item_count.short_description = 'Item Count'
 
+    def item_summary(self, obj):
+        items = obj.items.all()
+        if not items:
+            return "No items"
+        summary = "<br>".join([f"{item.movie.name} (Qty: {item.quantity})" for item in items])
+        return mark_safe(summary)
+    item_summary.short_description = 'Items in Order'
+
 admin.site.register(Order, OrderAdmin)
 
 class OrderItemAdmin(admin.ModelAdmin):
     save_on_top = True
-    list_display = ('order', 'movie_link', 'quantity', 'price')
+    list_display = ('order_link', 'movie_link', 'quantity', 'price')
     autocomplete_fields = ['movie', 'order']
     list_select_related = ('movie', 'order')
+    list_filter = ('order', 'movie')
+    search_fields = ('order__id', 'movie__name')
+
+    def order_link(self, obj):
+        url = reverse("admin:cart_order_change", args=[obj.order.pk])
+        return mark_safe(f'<a href="{url}">Order #{obj.order.pk}</a>')
+    order_link.short_description = 'Order'
 
     def movie_link(self, obj):
         url = reverse("admin:movies_movie_change", args=[obj.movie.pk])
