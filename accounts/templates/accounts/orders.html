@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>My Orders</title>
 </head>
 <body>
   {% extends 'base.html' %}
@@ -32,7 +32,7 @@
                     </tr>
                   </thead>
                   <tbody>
-                    {% for item in order.item_set.all %}
+                    {% for item in order.items.all %}
                     <tr>
                       <td>{{ item.movie.id }}</td>
                       <td>
