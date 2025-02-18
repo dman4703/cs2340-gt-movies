@@ -22,14 +22,21 @@
           </p>
           <div class="d-flex justify-content-between align-items-center">
             <label for="rating">Rating:</label>
-            <input type="range" id="rating" name="rating" min="1" max="5" value="3" class="form-range"
-                   style="width: 50%;">
-            <span id="rating-value" class="ms-2"></span>
+            <input type="range" id="rating" name="rating" min="1" max="5" value="{{ template_data.review.rating }}"
+                   class="form-range" style="width: 50%;">
+            <div><span id="rating-value" class="ms-2">{{ template_data.review.rating }}</span> / 5</div>
           </div>
-          <div class="text-start">
-            <button type="submit"
-              class="btn bg-dark text-white">Edit Review
-            </button>
+
+          <script>
+            const ratingInput = document.getElementById("rating");
+            const ratingValue = document.getElementById("rating-value");
+            ratingInput.addEventListener("input", function () {
+              ratingValue.textContent = this.value;
+            });
+          </script>
+          <div class="mt-3">
+            <button type="submit" class="btn bg-dark text-white me-2">Save</button>
+            <a href="{% url 'movies.show' id=template_data.review.movie.id %}" class="btn btn-danger">Cancel</a>
           </div>
         </form>
       </div>
