@@ -21,8 +21,7 @@
           <div class="card-body">
             <b>Date:</b> {{ order.date }}<br />
             <b>Total:</b> ${{ order.total }}<br />
-            <table class="table table-bordered
-              table-striped text-center mt-3">
+            <table class="table table-bordered table-striped text-center mt-3">
               <thead>
                 <tr>
                   <th scope="col">Item ID</th>
@@ -37,8 +36,7 @@
                   <td>{{ item.movie.id }}</td>
                   <td>
                     <a class="link-dark"
-                      href="{% url 'movies.show'
-                      id=item.movie.id %}">
+                      href="{% url 'movies.show' id=item.movie.id %}">
                       {{ item.movie.name }}
                     </a>
                   </td>

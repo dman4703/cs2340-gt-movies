@@ -17,9 +17,7 @@
           <b>Price:</b> ${{ template_data.movie.price }}
         </p>
         <p class="card-text">
-          <form method="post"
-            action="{% url 'cart.add'
-            id=template_data.movie.id %}">
+          <form method="post" action="{% url 'cart.add' id=template_data.movie.id %}">
             <div class="row">
               {% csrf_token %}
               <div class="col-auto">

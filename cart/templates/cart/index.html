@@ -34,8 +34,7 @@
             <td>{{ movie.id }}</td>
             <td>{{ movie.name }}</td>
             <td>${{ movie.price }}</td>
-            <td>{{
-            request.session.cart|get_quantity:movie.id }}
+            <td>{{ request.session.cart|get_quantity:movie.id }}
             </td>
             </tr>
             {% endfor %}
