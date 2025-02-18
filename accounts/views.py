@@ -54,5 +54,6 @@ def signup(request):
 
 @login_required
 def orders(request):
+    template_data = {}
     template_data = {'title': 'Orders', 'orders': request.user.order_set.all()}
     return render(request, 'accounts/orders.html', {'template_data': template_data})
