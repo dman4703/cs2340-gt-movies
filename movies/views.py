@@ -4,14 +4,30 @@ from django.contrib.auth.decorators import login_required
 
 def index(request):
     """
-    Display a list of movies. If a search query is provided, filter by name.
+    Display a list of movies.
+    Optionally filter by 'search' and 'genre' GET parameters.
     """
     search_term = request.GET.get('search', '')
-    movies = Movie.objects.filter(name__icontains=search_term) if search_term else Movie.objects.all()
+    genre_filter = request.GET.get('genre', '')
 
+    # Start with all movies
+    movies = Movie.objects.all()
+
+    # Filter by search term if provided
+    if search_term:
+        movies = movies.filter(name__icontains=search_term)
+
+    # Filter by genre if provided (and not blank)
+    if genre_filter:
+        movies = movies.filter(genre=genre_filter)
+
+    # Pass available genre choices to the template
     template_data = {
         'title': 'Movies',
         'movies': movies,
+        'genres': Movie.GENRE_CHOICES,  # e.g. [('ACTION','Action'), ('COMEDY','Comedy'), ...]
+        'selected_genre': genre_filter, # to mark the dropdown as "selected"
+        'search_term': search_term,     # so we can preserve search text
     }
     return render(request, 'movies/index.html', {'template_data': template_data})
 

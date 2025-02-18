@@ -32,6 +32,8 @@ class Movie(models.Model):
     id = models.AutoField(primary_key=True)
     GENRE_CHOICES = [
         ('ACTION', 'Action'),
+        ('FAMILY', 'Family'),
+        ('ADVENTURE', 'Adventure'),
         ('COMEDY', 'Comedy'),
         ('DRAMA', 'Drama'),
         ('HORROR', 'Horror'),

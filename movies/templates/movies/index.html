@@ -2,36 +2,68 @@
 {% block content %}
 {% load static %}
 <div class="p-3">
-  <div class="container text-center">
+  <div class="container">
     <div class="row mt-3">
-      <div class="col mx-auto mb-3">
-        <h2>List of Movies</h2>
+      <div class="col mx-auto mb-3 text-center">
+        <h2><a href="{% url 'movies.index' %}" class="text-decoration-none text-dark">Movies</a></h2>
         <hr />
-        <p class="card-text">
-          <form method="GET">
-            <div class="row">
-              <div class="col-auto mx-auto w-100">
-                <div class="input-group col-auto">
-                  <input type="text" class="form-control" name="search" placeholder="Search movies...">
-                  <button class="btn-custom" type="submit">Search</button>
-                </div>
+
+        <!-- Row to hold Search & Genre Filter side by side -->
+        <div class="row justify-content-center">
+          <!-- SEARCH FORM -->
+          <div class="col flex-grow-1">
+            <form method="GET" class="mb-3">
+              {% if template_data.selected_genre %}
+              <input type="hidden" name="genre" value="{{ template_data.selected_genre }}">
+              {% endif %}
+              <div class="input-group">
+                <input type="text" class="form-control"
+                       name="search"
+                       value="{{ template_data.search_term }}"
+                       placeholder="Search movies...">
+                <button class="btn-custom" type="submit">Search</button>
               </div>
-            </div>
-          </form>
-        </p>
+            </form>
+          </div>
+
+          <!-- GENRE FILTER FORM -->
+          <div class="col-auto">
+            <form method="GET" class="mb-3">
+              {% if template_data.search_term %}
+              <input type="hidden" name="search" value="{{ template_data.search_term }}">
+              {% endif %}
+              <div class="input-group">
+                <label class="input-group-text" for="genre">Genre</label>
+                <select class="form-select w-auto" id="genre" name="genre">
+                  <option value="">All genres</option>
+                  {% for genre_code, genre_label in template_data.genres %}
+                  <option value="{{ genre_code }}"
+                          {% if template_data.selected_genre == genre_code %}selected{% endif %}>
+                    {{ genre_label }}
+                  </option>
+                  {% endfor %}
+                </select>
+                <button class="btn-custom" type="submit">Filter</button>
+              </div>
+            </form>
+          </div>
+        </div>
+
+        <!-- End row for Search & Filter -->
       </div>
     </div>
-    <div class="row">
-      <div class="row bg-white rounded">
-        {% for movie in template_data.movies %}
+
+    <!-- MOVIES LIST -->
+    <div class="row bg-white rounded justify-content-center">
+      {% for movie in template_data.movies %}
         <div class="col-md-4 col-lg-3 mt-3 mb-3">
           <div class="p-2 card align-items-center pt-4">
             {% if movie.image %}
-            <img src="{{ movie.image.url }}" class="card-img-top rounded img-card-200" alt="{{ movie.name }}">
+              <img src="{{ movie.image.url }}" class="card-img-top rounded img-card-200" alt="{{ movie.name }}">
             {% elif movie.image_url %}
-            <img src="{{ movie.image_url }}" class="card-img-top rounded img-card-200" alt="{{ movie.name }}">
+              <img src="{{ movie.image_url }}" class="card-img-top rounded img-card-200" alt="{{ movie.name }}">
             {% else %}
-            <p>No image available.</p>
+              <p>No image available.</p>
             {% endif %}
             <div class="card-body text-center">
               <a href="{% url 'movies.show' id=movie.id %}" class="btn-custom">{{ movie.name }}</a>
@@ -40,10 +72,9 @@
             </div>
           </div>
         </div>
-        {% empty %}
+      {% empty %}
         <p class="text-center">No movies found.</p>
-        {% endfor %}
-      </div>
+      {% endfor %}
     </div>
   </div>
 </div>
