@@ -39,6 +39,7 @@ class Movie(models.Model):
         ('HORROR', 'Horror'),
         ('SCIFI', 'Sci-Fi'),
         ('ROMANCE', 'Romance'),
+        ('FANTASY', 'Fantasy'),
     ]
 
     name = models.CharField(max_length=255, db_index=True)
